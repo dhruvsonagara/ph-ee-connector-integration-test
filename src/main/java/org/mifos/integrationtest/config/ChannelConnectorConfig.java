@@ -13,12 +13,17 @@ public class ChannelConnectorConfig {
     @Value("${channel-connector.endpoints.transfer}")
     public String transferEndpoint;
 
+<<<<<<< HEAD
     @Value("${channel-connector.endpoints.gsma-p2p}")
     public String gsmaP2PEndpoint;
     @Value("${channel-connector.endpoints.collection}")
     public String collectionEndpoint;
     @Value("${channel-connector.endpoints.transferReq}")
     public String transferReqEndpoint;
+=======
+    @Value("${channel-connector.endpoints.international_remittance}")
+    public String internationalRemittanceEndpoint;
+>>>>>>> a3cb004 (Added integration test for GSMA international remmitance payee API)
 
     public String transferUrl;
 
