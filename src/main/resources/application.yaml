@@ -30,7 +30,6 @@ channel-connector:
   contactpoint: "http://localhost:5002"
   endpoints:
     transfer: "/channel/transfer"
-<<<<<<< HEAD
     gsma-p2p: "/channel/gsma/transfer"
     collection: "/channel/collection"
     transferReq: "/channel/transactionRequest"
