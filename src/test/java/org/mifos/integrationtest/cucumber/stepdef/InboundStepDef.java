@@ -53,7 +53,7 @@ public class InboundStepDef extends BaseStepDef {
             JSONObject jsonObject = new JSONObject(BaseStepDef.response);
             transactionId = jsonObject.getString("transactionId");
         } catch (JSONException e) {
-            e.printStackTrace();
+            logger.debug("{}", e.getMessage());
             assertThat(false).isTrue();
             return;
         }

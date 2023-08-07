@@ -67,7 +67,7 @@ public class IdempotencyStepDef extends BaseStepDef {
     }
 
     @And("I should have error as Transaction already Exists")
-    public void iShouldHaveErrorAsTransactionAlreadyExists() throws Throwable {
+    public void iShouldHaveErrorAsTransactionAlreadyExists() throws Exception {
         assertThat(BaseStepDef.response).contains("Transaction already exists");
     }
 

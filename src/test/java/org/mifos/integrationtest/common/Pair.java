@@ -1,28 +1,28 @@
 package org.mifos.integrationtest.common;
 
-public class Pair<KEY, VALUE> {
+public class Pair<Key, Value> {
 
-    private KEY key;
-    private VALUE value;
+    private Key key;
+    private Value value;
 
-    public Pair(KEY key, VALUE value) {
+    public Pair(Key key, Value value) {
         this.key = key;
         this.value = value;
     }
 
-    public KEY getKey() {
+    public Key getKey() {
         return key;
     }
 
-    public void setKey(KEY key) {
+    public void setKey(Key key) {
         this.key = key;
     }
 
-    public VALUE getValue() {
+    public Value getValue() {
         return value;
     }
 
-    public void setValue(VALUE value) {
+    public void setValue(Value value) {
         this.value = value;
     }
 }

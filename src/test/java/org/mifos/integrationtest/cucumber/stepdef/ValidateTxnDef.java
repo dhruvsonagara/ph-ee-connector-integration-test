@@ -6,7 +6,7 @@ import io.cucumber.core.internal.com.fasterxml.jackson.core.JsonProcessingExcept
 import io.cucumber.java.en.Given;
 import org.mifos.connector.common.channel.dto.TransactionChannelRequestDTO;
 
-public class validateTxnDef extends BaseStepDef {
+public class ValidateTxnDef extends BaseStepDef {
 
     public static TransactionChannelRequestDTO mockTransactionChannelRequestDTO = null;
 

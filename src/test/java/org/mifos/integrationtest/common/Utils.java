@@ -3,8 +3,12 @@ package org.mifos.integrationtest.common;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class Utils {
+public final class Utils {
+
+    private Utils() {}
 
     public static final String TENANT_PARAM_NAME = "Platform-TenantId";
     public static final String REQUEST_TYPE_PARAM_NAME = "requestType";
@@ -17,6 +21,8 @@ public class Utils {
     public static final String HEADER_PURPOSE = "purpose";
     public static final String QUERY_PARAM_TYPE = "type";
 
+    public static Logger logger = LoggerFactory.getLogger(Utils.class);
+
     public static void initializeRESTAssured() {
         RestAssured.baseURI = "https://localhost";
         RestAssured.port = 8443;
@@ -26,7 +32,7 @@ public class Utils {
         try {
             Thread.sleep(seconds * 1000);
         } catch (InterruptedException e) {
-            System.out.println("Unexpected InterruptedException" + e);
+            logger.debug("Unexpected InterruptedException : {}", e);
             throw new IllegalStateException("Unexpected InterruptedException", e);
         }
     }
@@ -48,7 +54,7 @@ public class Utils {
     public static RequestSpecification getDefaultSpec(String tenant) {
         RequestSpecification requestSpec = getDefaultSpec();
         requestSpec.header(TENANT_PARAM_NAME, tenant);
-//         requestSpec.header(X_CORRELATIONID, "123456789");
+        // requestSpec.header(X_CORRELATIONID, "123456789");
         requestSpec.header(CONTENT_TYPE, "application/json");
         return requestSpec;
     }

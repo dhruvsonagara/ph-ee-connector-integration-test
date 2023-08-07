@@ -6,7 +6,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class OperationsHelper {
+public final class OperationsHelper {
+
+    private OperationsHelper() {}
 
     public static JSONObject getBulkFilterRequestBodyForExternalId(List<String> externalIds) throws JSONException {
         JSONObject body = new JSONObject();
